@@ -36,7 +36,7 @@ public class CNLToolchain
     private String server;
     
     /**
-     * Konstruktur für CNLToolchain
+     * Konstruktur fÃ¼r CNLToolchain
      * 
      * Zugriffe auf 
      * - Stardog-API
@@ -57,22 +57,22 @@ public class CNLToolchain
     /**
      * Zentrale Methode zum Aufrufen des gesamten ConformanceChecking-Ablaufs
      * 
-     * Alle Parameter werden hier gesetzt (Bisher werden keine Parameter übergeben)
+     * Alle Parameter werden hier gesetzt (Bisher werden keine Parameter Ã¼bergeben)
      * Eine CNLToolchain-Insatz wird erstellt.
-     * Die execute()-Methode zur Durchfürhung des ConformanceChecks eird aufgerufen
+     * Die execute()-Methode zur DurchfÃ¼rhung des ConformanceChecks eird aufgerufen
      * 
      * Diese Parameter sind:
      * - database 		Name der Stardog-DB
-     * - server 		localhost und Port für den Zugriff auf die DB-Instanz
-     * - context 		noch zu klären
-     * - projectPath	Projektpfad des zu überprüfenden Projekts
+     * - server 		localhost und Port fÃ¼r den Zugriff auf die DB-Instanz
+     * - context 		noch zu klÃ¤ren
+     * - projectPath	Projektpfad des zu Ã¼berprÃ¼fenden Projekts
      * - rulesFile 		Name des Asciidoc-Files mit Regeln und Mappings
      * 
      * @param args
      */
     public static void main(String[] args)
     {    	 
-    	// TODO: Parameter von aussen übergeben (z.B. über Parameter-File)
+    	// TODO: Parameter von aussen Ã¼bergeben (z.B. Ã¼ber Parameter-File)
         LOG.info("Initializing ...");
         String database = "MWTest11";
         String server =  "http://localhost:5820";
@@ -165,7 +165,7 @@ public class CNLToolchain
             .keySet())
         {
         	LOG.info("conformance checking rule: " + rule.getCnlSentence());
-        	// TODO: rule hat offenbar keinen Type .... Recherche hier fortführen!
+        	// TODO: rule hat offenbar keinen Type .... Recherche hier fortfÃ¼hren!
         //	LOG.info("conformance checking rule: " + rule.getType().toString());
             check.storeArchitectureRule(rule);
             check.validateRule(rule, db, context);
